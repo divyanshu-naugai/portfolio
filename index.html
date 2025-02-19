@@ -1,74 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Divyanshu Naugai's portfolio showcasing projects & skills web development. Explore my work and get in touch for collaborations.">
-    <meta name="keywords" content="Divyanshu Naugai, portfolio, web development, projects, skills, web developer">
+    <meta name="description" content="Divyanshu Naugai's portfolio showcasing expertise in Electronics Engineering and Web Development">
+    <meta name="keywords" content="Divyanshu Naugai, portfolio, electronics engineer, analog electronics, digital electronics, VLSI, web development">
     <meta name="author" content="Divyanshu Naugai">
-    <title>Divyanshu Naugai - Portfolio</title>
-    <link rel="icon" href="./images/potrait.jpg" type="image/jpeg">
-    <link rel="canonical" href="https://adwait7830.github.io/portfolio/">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Divyanshu Naugai - Portfolio">
-    <meta property="og:description"
-        content="Divyanshu Naugai's portfolio showcasing projects, skills, and achievements in web development. Explore my work and get in touch for collaborations.">
-    <meta property="og:image" content="https://adwait7830.github.io/portfolio//images/profile.jpg">
-    <meta property="og:url" content="https://adwait7830.github.io/portfolio/">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Divyanshu Naugai - Portfolio">
-    <meta name="twitter:description"
-        content="Divyanshu Naugai's portfolio showcasing projects, skills, and achievements in web development. Explore my work and get in touch for collaborations.">
-    <meta name="twitter:image" content="https://adwait7830.github.io/portfolio//images/profile.jpg">
-
+    <title>Divyanshu Naugai - Electronics Engineer & Web Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a237e 0%, #311b92 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
 </head>
 
-
-<body class="bg-gradient-to-br from-blue-900 to-purple-900 text-white min-h-screen">
-    <header class="container mx-auto px-4 py-8">
-        <h1 class="text-5xl font-bold text-center mb-4">Divyanshu Naugai</h1>
-        <p class="text-xl text-center">Electronics and Communication Engineer | Web Developer</p>
+<body class="gradient-bg text-white min-h-screen">
+    <header class="container mx-auto px-4 py-12">
+        <h1 class="lg:text-6xl text-4xl font-bold text-center mb-4">Divyanshu Naugai</h1>
+        <p class="lg:text-2xl text-center text-gray-200">Electronics Engineer | Digital Designer | Web Developer</p>
     </header>
 
     <main class="container mx-auto px-4 py-8">
-        <div class="flex flex-col md:flex-row items-center justify-between mb-16">
-            <div class="md:w-1/2 mb-8 md:mb-0">
-                <h2 class="text-3xl font-bold mb-4">About Me</h2>
-                <p class="text-lg">
-                    I'm an Electronics and Communication Engineer with a burning passion for web development.
-                    While my primary focus is on electronics, I've carved out a niche for myself in the digital realm,
-                    turning web projects into exciting side hustles that fuel my creativity.<br><br>
-
-                    Beyond my technical pursuits, I am deeply interested in poetry and philosophy. Writing poetry
-                    allows me to explore and express my thoughts and emotions, while philosophy provides me with
-                    a framework to understand the world and my place in it. These interests complement my technical
-                    work, enriching my perspective and approach to problem-solving.
+        <div class="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6">About Me</h2>
+                <p class="text-lg leading-relaxed text-gray-200">
+                    I'm an Electronics and Communication Engineer specializing in analog and digital electronics design. 
+                    With extensive experience in VLSI design and simulation tools like Xilinx, MATLAB, and Ansys, 
+                    I bring theoretical concepts to life through practical implementations.
+                    <br><br>
+                    Currently expanding my expertise in analog electronics through Cadence, 
+                    I also maintain a strong interest in web development, creating innovative solutions 
+                    that bridge hardware and software domains.
+                    <br><br>
+                    Beyond technical work, I find inspiration in poetry and philosophy, 
+                    which enhance my creative problem-solving approach in engineering.
                 </p>
             </div>
-            <div class="md:w-1/2 ">
-                <img src="./images/potrait.jpg" alt="Divyanshu Naugai" height="300" width="300"
-                    class="rounded-full mx-auto shadow-lg">
+            <div class="md:w-1/2 flex justify-center">
+                <img src="./images/potrait.jpg" alt="Divyanshu Naugai" class="rounded-full w-64 h-64 object-cover shadow-2xl border-4 border-indigo-200 border-opacity-50">
             </div>
         </div>
 
         <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Technical Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-lg card-hover">
+                    <h3 class="text-xl font-semibold mb-4">Electronics Core</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i data-feather="cpu" class="w-6 h-6 mr-3 text-indigo-300"></i>
+                            Analog Electronics Design
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="hard-drive" class="w-6 h-6 mr-3 text-indigo-300"></i>
+                            Digital Electronics
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="box" class="w-6 h-6 mr-3 text-indigo-300"></i>
+                            VLSI Design
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="terminal" class="w-6 h-6 mr-3 text-indigo-300"></i>
+                            Circuit Analysis
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-lg card-hover">
+                    <h3 class="text-xl font-semibold mb-4">Design Tools</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i data-feather="tool" class="w-6 h-6 mr-3 text-indigo-300"></i>
+                            Xilinx ISE/Vivado
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="coffee" class="w-6 h-6 mr-3 text-indigo-300"></i>
+                            MATLAB
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="package" class="w-6 h-6 mr-3 text-indigo-300"></i>
+                            Ansys
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="layers" class="w-6 h-6 mr-3 text-indigo-300"></i>
+                            Cadence (Learning)
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-lg card-hover">
+                    <h3 class="text-xl font-semibold mb-4">Web Development</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i data-feather="code" class="w-6 h-6 mr-3 text-indigo-300"></i>
+                            HTML/CSS/JavaScript
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="git-branch" class="w-6 h-6 mr-3 text-indigo-300"></i>
+                            React.js/Next.js
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="database" class="w-6 h-6 mr-3 text-indigo-300"></i>
+                            PHP/Laravel
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="layout" class="w-6 h-6 mr-3 text-indigo-300"></i>
+                            Tailwind CSS/Bootstrap
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Original web projects maintained -->
+                <div class="bg-white bg-opacity-10 rounded-lg overflow-hidden shadow-lg card-hover">
+                    <img src="./images/prayog.png" alt="Prayog Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Prayog</h3>
+                        <p class="text-gray-300 mb-4">An integrated platform for university student projects, showcasing technical innovations and research.</p>
+                        <div class="flex justify-between">
+                            <a href="https://github.com/adwait7830/prayog" class="text-indigo-300 hover:text-indigo-200">Repository</a>
+                            <a href="https://prayog.vercel.app/" class="text-indigo-300 hover:text-indigo-200">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- <div class="bg-white bg-opacity-10 rounded-lg overflow-hidden shadow-lg card-hover">
+                    <img src="/api/placeholder/400/200" alt="Electronics Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Digital Signal Processing System</h3>
+                        <p class="text-gray-300 mb-4">Custom DSP implementation using MATLAB and FPGA, featuring real-time signal processing capabilities.</p>
+                        <div class="flex justify-center">
+                            <span class="text-indigo-300">Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 rounded-lg overflow-hidden shadow-lg card-hover">
+                    <img src="/api/placeholder/400/200" alt="Analog Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Analog Circuit Design</h3>
+                        <p class="text-gray-300 mb-4">Advanced analog circuit implementations using Cadence, focusing on power efficiency and signal integrity.</p>
+                        <div class="flex justify-center">
+                            <span class="text-indigo-300">Coming Soon</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <section class="mb-16">
             <h2 class="text-3xl font-bold mb-8 text-center">Poetry</h2>
-            <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-filter backdrop-blur-lg">
+            <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-blur-lg max-w-2xl mx-auto">
                 <h3 class="text-xl font-semibold mb-4 text-center">Death to whom?</h3>
-                <p class=" md:text-lg text-gray-300 text-center">
+                <p class="text-lg text-gray-200 text-center leading-relaxed">
                     In the realm of unawareness,<br>
                     They know nothing of the pain.<br>
                     Yet here I am, walking in their footsteps,<br>
                     Wishing an end to their suffering.<br><br>
-
                     Death? Oh, forgive my selfish thoughts,<br>
                     How self-centered I am,<br>
                     Contemplating my own desires<br>
@@ -77,145 +180,27 @@
             </div>
         </section>
 
-
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-filter backdrop-blur-lg">
-                    <h3 class="text-xl font-semibold mb-4">Languages</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <i data-feather="check" class="w-6 h-6 mr-2 text-green-400"></i>
-                            HTML
-                        </li>
-                        <li class="flex items-center">
-                            <i data-feather="check" class="w-6 h-6 mr-2 text-green-400"></i>
-                            CSS
-                        </li>
-                        <li class="flex items-center">
-                            <i data-feather="check" class="w-6 h-6 mr-2 text-green-400"></i>
-                            JavaScript
-                        </li>
-                        <li class="flex items-center">
-                            <i data-feather="check" class="w-6 h-6 mr-2 text-green-400"></i>
-                            TypeScript
-                        </li>
-                        <li class="flex items-center">
-                            <i data-feather="check" class="w-6 h-6 mr-2 text-green-400"></i>
-                            PHP
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-filter backdrop-blur-lg">
-                    <h3 class="text-xl font-semibold mb-4">Frameworks & Libraries</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <i data-feather="check" class="w-6 h-6 mr-2 text-green-400"></i>
-                            React.js
-                        </li>
-                        <li class="flex items-center">
-                            <i data-feather="check" class="w-6 h-6 mr-2 text-green-400"></i>
-                            Next.js
-                        </li>
-                        <li class="flex items-center">
-                            <i data-feather="check" class="w-6 h-6 mr-2 text-green-400"></i>
-                            Astro.js
-                        </li>
-                        <li class="flex items-center">
-                            <i data-feather="check" class="w-6 h-6 mr-2 text-green-400"></i>
-                            Laravel
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-filter backdrop-blur-lg">
-                    <h3 class="text-xl font-semibold mb-4">CSS Frameworks</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <i data-feather="check" class="w-6 h-6 mr-2 text-green-400"></i>
-                            Tailwind CSS
-                        </li>
-                        <li class="flex items-center">
-                            <i data-feather="check" class="w-6 h-6 mr-2 text-green-400"></i>
-                            Bootstrap
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div
-                    class="bg-white bg-opacity-10 rounded-lg overflow-hidden shadow-lg transition duration-300 hover:transform hover:scale-105">
-                    <img src="./images/prayog.png" alt="Project 1" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Prayog</h3>
-                        <p class="text-gray-300 mb-4">Prayog is an online integrated platform for projects taken up by
-                            the students of various universities/colleges</p>
-                        <div class="flex items-center justify-between">
-                            <a href="https://github.com/adwait7830/prayog" class="text-yellow-400 hover:underline">View
-                                Repository</a>
-                            <a href="https://prayog.vercel.app/" class="text-yellow-400 hover:underline">Visit
-                                Website</a>
-                        </div>
-
-                    </div>
-                </div>
-                <div
-                    class="bg-white bg-opacity-10 rounded-lg overflow-hidden shadow-lg transition duration-300 hover:transform hover:scale-105">
-                    <img src="./images/fstc.png" alt="Project 2" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">FSTC</h3>
-                        <p class="text-gray-300 mb-4">This project was developed to provide information and resources
-                            for food safety training. </p>
-                        <div class="flex items-center justify-between">
-                            <a href="https://github.com/adwait7830/fstc" class="text-yellow-400 hover:underline">View
-                                Project</a>
-                            <a href="https://fstc.vercel.app/" class="text-yellow-400 hover:underline">Visit Website</a>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="bg-white bg-opacity-10 rounded-lg overflow-hidden shadow-lg transition duration-300 hover:transform hover:scale-105">
-                    <img src="./images/e-library.png" alt="Project 3" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">E Library</h3>
-                        <p class="text-gray-300 mb-4">E-Library 📚🌐. A user-friendly website using PHP, JavaScript, CSS
-                            Bootstrap, and SQL 🚀💻.</p>
-                        <div class="flex items-center justify-between">
-                            <a href="https://github.com/adwait7830/e-Library-PHP"
-                                class="text-yellow-400 hover:underline">View Project</a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="text-center">
-            <h2 class="text-2xl font-bold mb-6">Social Links</h2>
-            <div class="flex justify-center space-x-6">
-                <a href="https://www.instagram.com/alone.thinktank" target="_blank"
-                    class="text-gray-600 hover:text-gray-900">
-                    <i data-feather="instagram" class="w-10 h-10"></i>
+            <h2 class="text-2xl font-bold mb-6">Connect With Me</h2>
+            <div class="flex justify-center space-x-8">
+                <a href="https://www.instagram.com/divyanshu.naugai" target="_blank" class="text-gray-200 hover:text-indigo-300 transition-colors">
+                    <i data-feather="instagram" class="w-8 h-8"></i>
                 </a>
-                <a href="https://github.com/adwait7830" target="_blank" class="text-gray-600 hover:text-gray-900">
-                    <i data-feather="github" class="w-10 h-10"></i>
+                <a href="https://github.com/adwait7830" target="_blank" class="text-gray-200 hover:text-indigo-300 transition-colors">
+                    <i data-feather="github" class="w-8 h-8"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/divyanshu-naugai" target="_blank"
-                    class="text-gray-600 hover:text-gray-900">
-                    <i data-feather="linkedin" class="w-10 h-10"></i>
+                <a href="https://www.linkedin.com/in/divyanshu-naugai" target="_blank" class="text-gray-200 hover:text-indigo-300 transition-colors">
+                    <i data-feather="linkedin" class="w-8 h-8"></i>
                 </a>
-                <a href="mailto:adwait7830@gmail.com" class="text-gray-600 hover:text-gray-900">
-                    <i data-feather="mail" class="w-10 h-10"></i>
+                <a href="mailto:divyanshunaugai360@gmail.com" class="text-gray-200 hover:text-indigo-300 transition-colors">
+                    <i data-feather="mail" class="w-8 h-8"></i>
                 </a>
             </div>
         </section>
     </main>
 
-    <footer class="bg-black bg-opacity-50 py-4 mt-12">
-        <div class="container mx-auto px-4 text-center">
+    <footer class="bg-black bg-opacity-50 py-6">
+        <div class="container mx-auto px-4 text-center text-gray-300">
             <p>&copy; 2024 Divyanshu Naugai. All rights reserved.</p>
         </div>
     </footer>
@@ -224,5 +209,4 @@
         feather.replace();
     </script>
 </body>
-
 </html>
