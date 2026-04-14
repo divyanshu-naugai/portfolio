@@ -18,6 +18,21 @@
       --grn:#6dc9a0;--grn-d:rgba(109,201,160,.1);
       --blu:#6b9bdc;--blu-d:rgba(107,155,220,.1);
       --pur:#a78bfa;--pur-d:rgba(167,139,250,.1);
+      color-scheme:dark light;
+    }
+    @media(prefers-color-scheme:light){
+      :root{
+        --bg:#f5f4f1;--surface:#ffffff;--surface2:#f0eeea;--surface3:#e8e5e0;
+        --border:rgba(0,0,0,.08);--border-h:rgba(0,0,0,.15);
+        --tp:#1a1a1a;--ts:#666;--tm:#bbb;
+        --acc:#9a6f2e;--acc-d:rgba(154,111,46,.08);--acc-b:rgba(154,111,46,.2);
+        --grn:#1a8f5e;--grn-d:rgba(26,143,94,.08);
+        --blu:#2060b0;--blu-d:rgba(32,96,176,.08);
+        --pur:#6040c0;--pur-d:rgba(96,64,192,.08);
+      }
+      body::before{opacity:.1}
+      body::after{background-image:linear-gradient(rgba(0,0,0,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.02) 1px,transparent 1px)}
+      nav{background:rgba(245,244,241,.92)}
     }
     html{scroll-behavior:smooth}
     body{background:var(--bg);color:var(--tp);font-family:'Outfit',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
@@ -93,7 +108,11 @@
     .dv.a{color:var(--acc)}
 
     .exp-sec{margin-bottom:96px}
-    .exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+    .exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:visible}
+    .ec:first-child{border-radius:13px 0 0 0}
+    .ec:nth-child(3){border-radius:0 13px 0 0}
+    .ec:nth-child(4){border-radius:0 0 0 13px}
+    .ec:last-child{border-radius:0 0 13px 0}
     .ec{background:var(--surface);padding:34px 30px;transition:background .3s}
     .ec:hover{background:var(--surface2)}
     .ei{width:37px;height:37px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
@@ -183,6 +202,13 @@
       .nav-links{display:none}
       .w{padding:0 24px}
       .hero-in,.about-grid,.con-grid{grid-template-columns:1fr;gap:36px}
+      .hero-in{text-align:center}
+      .hero-in .badge{justify-content:center}
+      .hero-in .role{justify-content:center}
+      .hero-in .role::before{display:none}
+      .hero-in .pills{justify-content:center}
+      .hero-in .cta{justify-content:center}
+      .av-wrap{display:flex;justify-content:center;order:-1}
       .av-img{width:160px;height:160px}
       .stats{grid-template-columns:1fr 1fr}
       .exp-grid{grid-template-columns:1fr 1fr}
@@ -437,9 +463,9 @@
         <p class="con-sub">Whether you're exploring research collaborations in quantum communications, DRL, or signal processing — or looking for a hardware/ML engineer for your team — I'd love to connect.</p>
       </div>
       <div class="con-links">
-        <a href="/cdn-cgi/l/email-protection#8febe6f9f6eee1fce7fae1eefae8eee6bcb9bfcfe8e2eee6e3a1ece0e2" class="cl">
+        <a href="mailto:divyanshunaugai360@gmail.com" class="cl">
           <div class="cl-ic"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div class="cl-t"><span class="cl-n">Email</span><span class="cl-d"><span class="__cf_email__" data-cfemail="24404d525d454a574c514a455143454d171214644349454d480a474b49">[email&#160;protected]</span></span></div>
+          <div class="cl-t"><span class="cl-n">Email</span><span class="cl-d">divyanshunaugai360@gmail.com</span></div>
           <span class="cl-ar"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
         </a>
         <a href="https://www.linkedin.com/in/divyanshu-naugai" target="_blank" class="cl">
@@ -459,3 +485,11 @@
 
 <footer>
   <div class="fl">
+    Crafted with <span>❤️</span> by Divyanshu Naugai
+  </div>
+  <div class="fr">
+    &copy; 2026 Divyanshu Naugai. All rights reserved.
+  </div>
+</footer>
+</body>
+</html>
