@@ -1,193 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Divyanshu Naugai - M.Tech in Communication & Signal Processing at IIT Indore. Expert in CSP, VLSI, and Research."
-    />
-    <meta
-      name="keywords"
-      content="Divyanshu Naugai, IIT Indore, Communication and Signal Processing, CSP, VLSI, Digital Signal Processing, IEEE Research"
-    />
-    <meta name="author" content="Divyanshu Naugai" />
-    <title>Divyanshu Naugai | Communication & Signal Processing Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <style>
-      .gradient-bg {
-        background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-      }
-      .card-hover {
-        transition: all 0.3s ease;
-      }
-      .card-hover:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Divyanshu Naugai - M.Tech Communication & Signal Processing, IIT Indore. Quantum Communication, QKD, DRL, VLSI, DSP, SDN, CRN." />
+  <title>Divyanshu Naugai | Engineer & Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#080808;--surface:#111;--surface2:#181818;--surface3:#1f1f1f;
+      --border:rgba(255,255,255,.07);--border-h:rgba(255,255,255,.14);
+      --tp:#f0ede8;--ts:#888;--tm:#3d3d3d;
+      --acc:#c8a96e;--acc-d:rgba(200,169,110,.1);--acc-b:rgba(200,169,110,.22);
+      --grn:#6dc9a0;--grn-d:rgba(109,201,160,.1);
+      --blu:#6b9bdc;--blu-d:rgba(107,155,220,.1);
+      --pur:#a78bfa;--pur-d:rgba(167,139,250,.1);
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--tp);font-family:'Outfit',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:.35}
+    body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
+    .orb{position:fixed;border-radius:50%;filter:blur(130px);pointer-events:none;z-index:0}
+    .o1{width:600px;height:600px;background:rgba(200,169,110,.045);top:-150px;right:-100px}
+    .o2{width:450px;height:450px;background:rgba(107,155,220,.04);bottom:15%;left:-180px}
+    .o3{width:350px;height:350px;background:rgba(167,139,250,.03);bottom:-80px;right:10%}
 
-  <body class="gradient-bg text-white min-h-screen font-sans">
-    <header class="container mx-auto px-4 py-16">
-      <h1 class="lg:text-6xl text-5xl font-extrabold text-center mb-4 tracking-tight">
-        Divyanshu Naugai
-      </h1>
-      <p class="lg:text-2xl text-xl text-center text-indigo-300 font-medium">
-        Communication & Signal Processing Engineer | M.Tech, IIT Indore
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 52px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);background:rgba(8,8,8,.87);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
+    .nav-logo{font-family:'DM Mono',monospace;font-size:13px;color:var(--ts);letter-spacing:.04em}
+    .nav-logo span{color:var(--acc)}
+    .nav-links{display:flex;gap:30px;list-style:none}
+    .nav-links a{font-size:12px;color:var(--ts);text-decoration:none;letter-spacing:.05em;font-family:'DM Mono',monospace;transition:color .2s}
+    .nav-links a:hover{color:var(--tp)}
+
+    .w{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 52px}
+
+    .hero{min-height:100vh;display:flex;align-items:center;padding-top:80px}
+    .hero-in{display:grid;grid-template-columns:1fr auto;gap:80px;align-items:center;width:100%}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--border-h);border-radius:100px;font-size:11px;font-family:'DM Mono',monospace;color:var(--ts);letter-spacing:.07em;margin-bottom:26px;background:var(--surface)}
+    .badge-dot{width:6px;height:6px;background:var(--grn);border-radius:50%;animation:blink 2s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    h1.hn{font-family:'DM Serif Display',serif;font-size:clamp(48px,6.5vw,84px);line-height:1;letter-spacing:-.02em;margin-bottom:10px}
+    h1.hn em{font-style:italic;color:var(--acc)}
+    .role{font-family:'DM Mono',monospace;font-size:12px;color:var(--ts);letter-spacing:.07em;margin-bottom:26px;display:flex;align-items:center;gap:12px}
+    .role::before{content:'';width:30px;height:1px;background:var(--acc);flex-shrink:0}
+    .hero-desc{font-size:15.5px;color:var(--ts);max-width:500px;line-height:1.82;margin-bottom:30px}
+    .hero-desc strong{color:var(--tp);font-weight:500}
+
+    .pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:34px}
+    .pill{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.07em;padding:5px 12px;border-radius:100px;border:1px solid}
+    .pq{color:var(--pur);border-color:rgba(167,139,250,.3);background:var(--pur-d)}
+    .ps{color:var(--blu);border-color:rgba(107,155,220,.3);background:var(--blu-d)}
+    .ph{color:var(--acc);border-color:var(--acc-b);background:var(--acc-d)}
+    .pm{color:var(--grn);border-color:rgba(109,201,160,.3);background:var(--grn-d)}
+
+    .cta{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{padding:11px 26px;border-radius:6px;font-size:12px;font-family:'DM Mono',monospace;letter-spacing:.05em;text-decoration:none;cursor:pointer;transition:all .22s;border:1px solid transparent;display:inline-block}
+    .btn-g{background:var(--acc);color:#080808;border-color:var(--acc);font-weight:500}
+    .btn-g:hover{background:transparent;color:var(--acc)}
+    .btn-o{background:transparent;color:var(--ts);border-color:var(--border-h)}
+    .btn-o:hover{color:var(--tp);border-color:rgba(255,255,255,.2)}
+
+    .av-wrap{position:relative;flex-shrink:0}
+    .av-ring{position:absolute;inset:-14px;border-radius:50%;border:1px solid rgba(200,169,110,.18);animation:spin 22s linear infinite}
+    .av-ring::before{content:'';position:absolute;top:-4px;left:50%;transform:translateX(-50%);width:8px;height:8px;background:var(--acc);border-radius:50%;box-shadow:0 0 8px var(--acc)}
+    @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+    .av-img{width:210px;height:210px;border-radius:50%;object-fit:cover;border:2px solid var(--border-h);display:block;filter:grayscale(15%)}
+
+    .stats{border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(4,1fr);margin:0 0 96px}
+    .si{padding:26px 0;text-align:center}
+    .si+.si{border-left:1px solid var(--border)}
+    .sn{font-family:'DM Serif Display',serif;font-size:30px;color:var(--tp);display:block;margin-bottom:4px}
+    .sl{font-family:'DM Mono',monospace;font-size:10px;color:var(--tm);letter-spacing:.09em;text-transform:uppercase}
+
+    .slabel{font-family:'DM Mono',monospace;font-size:10px;color:var(--acc);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+    .slabel::after{content:'';flex:1;height:1px;background:var(--border)}
+    .stitle{font-family:'DM Serif Display',serif;font-size:clamp(28px,3.5vw,42px);color:var(--tp);letter-spacing:-.02em;margin-bottom:10px}
+    .ssub{font-size:14.5px;color:var(--ts);margin-bottom:44px;max-width:560px;line-height:1.8}
+
+    .about-sec{margin-bottom:96px}
+    .about-grid{display:grid;grid-template-columns:3fr 2fr;gap:60px;align-items:start}
+    .about-text{font-size:15px;color:var(--ts);line-height:1.9}
+    .about-text p+p{margin-top:16px}
+    .about-text strong{color:var(--tp);font-weight:500}
+    .detail{display:flex;justify-content:space-between;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--border);font-size:13px;gap:14px}
+    .detail:first-child{border-top:1px solid var(--border)}
+    .dk{font-family:'DM Mono',monospace;color:var(--tm);letter-spacing:.04em;flex-shrink:0}
+    .dv{color:var(--tp);font-weight:500;text-align:right}
+    .dv.g{color:var(--grn)}
+    .dv.a{color:var(--acc)}
+
+    .exp-sec{margin-bottom:96px}
+    .exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+    .ec{background:var(--surface);padding:34px 30px;transition:background .3s}
+    .ec:hover{background:var(--surface2)}
+    .ei{width:37px;height:37px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+    .ei svg{width:16px;height:16px;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;fill:none}
+    .ei-g{background:var(--acc-d);border:1px solid var(--acc-b)}
+    .ei-g svg{stroke:var(--acc)}
+    .ei-b{background:var(--blu-d);border:1px solid rgba(107,155,220,.2)}
+    .ei-b svg{stroke:var(--blu)}
+    .ei-p{background:var(--pur-d);border:1px solid rgba(167,139,250,.2)}
+    .ei-p svg{stroke:var(--pur)}
+    .ei-gr{background:var(--grn-d);border:1px solid rgba(109,201,160,.2)}
+    .ei-gr svg{stroke:var(--grn)}
+    .ec h3{font-size:14.5px;font-weight:600;color:var(--tp);margin-bottom:16px;letter-spacing:-.01em}
+    .el{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .el li{font-size:11.5px;color:var(--ts);font-family:'DM Mono',monospace;display:flex;align-items:flex-start;gap:8px;line-height:1.55}
+    .el li::before{content:'';width:4px;height:4px;border-radius:50%;flex-shrink:0;margin-top:6px;opacity:.5}
+    .ei-g~.el li::before{background:var(--acc)}
+    .ei-b~.el li::before{background:var(--blu)}
+    .ei-p~.el li::before{background:var(--pur)}
+    .ei-gr~.el li::before{background:var(--grn)}
+
+    .res-sec{margin-bottom:96px}
+    .res-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:46px;display:grid;grid-template-columns:1fr auto;gap:44px;align-items:start;transition:border-color .3s;position:relative;overflow:hidden}
+    .res-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--acc-d),transparent 50%);opacity:0;transition:opacity .3s;pointer-events:none}
+    .res-card:hover{border-color:var(--border-h)}
+    .res-card:hover::before{opacity:1}
+    .res-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);border:1px solid var(--acc-b);padding:4px 10px;border-radius:100px;display:inline-block;margin-bottom:16px}
+    .res-title{font-family:'DM Serif Display',serif;font-size:20px;color:var(--tp);letter-spacing:-.01em;line-height:1.35;margin-bottom:12px}
+    .res-desc{font-size:13.5px;color:var(--ts);line-height:1.82;margin-bottom:22px}
+    .res-meta{font-family:'DM Mono',monospace;font-size:11px;color:var(--tm)}
+    .res-actions{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+    .res-link{display:flex;align-items:center;gap:8px;padding:11px 20px;border:1px solid var(--border-h);border-radius:6px;font-family:'DM Mono',monospace;font-size:11px;color:var(--tp);text-decoration:none;white-space:nowrap;transition:all .2s}
+    .res-link:hover{background:var(--acc);color:#080808;border-color:var(--acc)}
+    .res-link svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+    .proj-sec{margin-bottom:96px}
+    .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .pc{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:34px;transition:all .28s;position:relative;overflow:hidden;text-decoration:none;display:block;color:inherit}
+    .pc::before{content:'';position:absolute;inset:0;opacity:0;transition:opacity .3s;pointer-events:none}
+    .pc:hover{border-color:var(--border-h);transform:translateY(-3px)}
+    .pc:hover::before{opacity:1}
+    .pc-b::before{background:linear-gradient(135deg,var(--blu-d),transparent 55%)}
+    .pc-g::before{background:linear-gradient(135deg,var(--grn-d),transparent 55%)}
+    .pn{font-family:'DM Mono',monospace;font-size:10px;color:var(--tm);margin-bottom:16px;letter-spacing:.1em;position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center}
+    .pl-ico{opacity:0;transition:opacity .2s}
+    .pl-ico svg{width:13px;height:13px;stroke:var(--tm);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .pc:hover .pl-ico{opacity:1}
+    .pt{font-family:'DM Serif Display',serif;font-size:18px;color:var(--tp);margin-bottom:9px;letter-spacing:-.01em;position:relative;z-index:1}
+    .pd{font-size:13px;color:var(--ts);line-height:1.8;margin-bottom:20px;position:relative;z-index:1}
+    .ptags{display:flex;flex-wrap:wrap;gap:7px;position:relative;z-index:1}
+    .ptag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;color:var(--tm);border:1px solid var(--border);padding:3px 9px;border-radius:4px}
+
+    .po-sec{margin-bottom:96px}
+    .po-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:58px;max-width:660px;margin:0 auto;text-align:center;position:relative}
+    .po-card::before{content:'"';position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-family:'DM Serif Display',serif;font-size:68px;color:var(--acc);line-height:1;opacity:.22}
+    .po-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin-bottom:26px}
+    .po-text{font-family:'DM Serif Display',serif;font-style:italic;font-size:16.5px;color:var(--ts);line-height:2.1}
+
+    .con-sec{margin-bottom:80px}
+    .con-grid{display:grid;grid-template-columns:5fr 4fr;gap:80px;align-items:center}
+    .con-h{font-family:'DM Serif Display',serif;font-size:clamp(32px,3.8vw,46px);color:var(--tp);letter-spacing:-.02em;line-height:1.18;margin-bottom:18px}
+    .con-h em{color:var(--acc);font-style:italic}
+    .con-sub{font-size:14px;color:var(--ts);line-height:1.85}
+    .con-links{display:flex;flex-direction:column;gap:10px}
+    .cl{display:flex;align-items:center;gap:14px;padding:17px 21px;border:1px solid var(--border);border-radius:10px;text-decoration:none;transition:all .22s;background:var(--surface)}
+    .cl:hover{border-color:var(--border-h);background:var(--surface2);transform:translateX(4px)}
+    .cl-ic{width:33px;height:33px;border-radius:8px;background:var(--acc-d);border:1px solid var(--acc-b);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .cl-ic svg{width:14px;height:14px;stroke:var(--acc);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .cl-t{flex:1}
+    .cl-n{font-size:13px;font-weight:500;color:var(--tp);display:block;margin-bottom:1px}
+    .cl-d{font-family:'DM Mono',monospace;font-size:11px;color:var(--tm)}
+    .cl-ar{color:var(--tm);transition:transform .2s,color .2s}
+    .cl:hover .cl-ar{transform:translateX(3px);color:var(--acc)}
+    .cl-ar svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+    footer{border-top:1px solid var(--border);padding:26px 52px;display:flex;justify-content:space-between;align-items:center;max-width:1120px;margin:0 auto}
+    .fl{font-family:'DM Mono',monospace;font-size:11px;color:var(--tm);letter-spacing:.04em}
+    .fl span{color:var(--acc)}
+    .fr{font-family:'DM Mono',monospace;font-size:11px;color:var(--tm)}
+
+    .fu{opacity:0;transform:translateY(22px);animation:fadeup .65s ease forwards}
+    .d1{animation-delay:.08s}.d2{animation-delay:.2s}.d3{animation-delay:.33s}.d4{animation-delay:.46s}.d5{animation-delay:.6s}
+    @keyframes fadeup{to{opacity:1;transform:translateY(0)}}
+
+    @media(max-width:900px){
+      nav{padding:16px 24px}
+      .nav-links{display:none}
+      .w{padding:0 24px}
+      .hero-in,.about-grid,.con-grid{grid-template-columns:1fr;gap:36px}
+      .av-img{width:160px;height:160px}
+      .stats{grid-template-columns:1fr 1fr}
+      .exp-grid{grid-template-columns:1fr 1fr}
+      .proj-grid,.res-card{grid-template-columns:1fr}
+      footer{flex-direction:column;gap:10px;text-align:center}
+    }
+    @media(max-width:600px){
+      .exp-grid,.stats{grid-template-columns:1fr}
+      .si+.si{border-left:none;border-top:1px solid var(--border)}
+    }
+  </style>
+</head>
+<body>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">dn<span>.</span>engineer</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#expertise">Skills</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="w" style="width:100%">
+    <div class="hero-in">
+      <div>
+        <div class="badge fu d1"><span class="badge-dot"></span>Open to research &amp; industry opportunities</div>
+        <h1 class="hn fu d2">Divyanshu<br><em>Naugai</em></h1>
+        <p class="role fu d3">M.Tech · IIT Indore · Communication &amp; Signal Processing</p>
+
+        <div class="pills fu d4">
+          <span class="pill pq">Quantum Comms &amp; QKD</span>
+          <span class="pill ps">Signal Processing</span>
+          <span class="pill ph">VLSI &amp; Digital Design</span>
+          <span class="pill pm">DRL / ML</span>
+          <span class="pill ps">SDN &amp; Cognitive Radio</span>
+        </div>
+
+        <div class="cta fu d5">
+          <a href="#research" class="btn btn-g">View Research</a>
+          <a href="#contact" class="btn btn-o">Get in Touch</a>
+        </div>
+      </div>
+      <div class="av-wrap fu d3">
+        <div class="av-ring"></div>
+        <img src="./images/self.jpeg" alt="Divyanshu Naugai" class="av-img" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="w">
+  <div class="stats">
+    <div class="si"><span class="sn" style="color:var(--acc)">1642</span><span class="sl">GATE EC AIR 2026</span></div>
+    <div class="si"><span class="sn">1+</span><span class="sl">IEEE Publication</span></div>
+    <div class="si"><span class="sn">QKD</span><span class="sl">Research Focus</span></div>
+    <div class="si"><span class="sn">IIT</span><span class="sl">Indore, M.Tech</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="w about-sec">
+    <p class="slabel">Background</p>
+    <h2 class="stitle">About Me</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I am pursuing my <strong>M.Tech in Communication and Signal Processing</strong> at IIT Indore, having completed my <strong>B.Tech in Electronics and Communication Engineering</strong> at BTKIT Dwarahat.</p>
+        <p>My research focuses on <strong>Quantum Communication and QKD</strong>, applying <strong>Deep Reinforcement Learning (DRL)</strong> to optimize quantum channel protocols and key distribution strategies. This sits on a foundation of <strong>Statistical Signal Processing, Optimization, and Estimation Theory</strong>, alongside work in Digital Logic, Information Theory, and Coding Theory.</p>
+        <p>I am drawn to modern communication paradigms — <strong>Software Defined Networking (SDN)</strong> and <strong>Cognitive Radio Networks (CRN)</strong> — and actively apply ML and Deep Learning to signal processing problems. Outside engineering, I find balance through <strong>poetry and philosophy</strong>.</p>
+      </div>
+      <div>
+        <div class="detail"><span class="dk">degree</span><span class="dv">M.Tech (CSP)</span></div>
+        <div class="detail"><span class="dk">institute</span><span class="dv">IIT Indore</span></div>
+        <div class="detail"><span class="dk">undergrad</span><span class="dv">BTKIT Dwarahat</span></div>
+        <div class="detail"><span class="dk">gate_ec</span><span class="dv a">AIR 1642</span></div>
+        <div class="detail"><span class="dk">research</span><span class="dv">QKD · DRL · SDN</span></div>
+        <div class="detail"><span class="dk">location</span><span class="dv">Indore, MP, India</span></div>
+        <div class="detail"><span class="dk">status</span><span class="dv g">Open to Opportunities</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="w exp-sec">
+    <p class="slabel">Domain Expertise</p>
+    <h2 class="stitle">Core Technical Skills</h2>
+    <div class="exp-grid">
+
+      <div class="ec">
+        <div class="ei ei-g"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3>Signal Processing</h3>
+        <ul class="el">
+          <li>Statistical Signal Processing</li>
+          <li>Estimation &amp; Optimization Theory</li>
+          <li>Discrete Wavelet Transforms</li>
+          <li>STFT &amp; Time-Frequency Analysis</li>
+          <li>Adaptive Filtering &amp; Denoising</li>
+        </ul>
+      </div>
+
+      <div class="ec">
+        <div class="ei ei-p"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+        <h3>Quantum Communication</h3>
+        <ul class="el">
+          <li>Quantum Key Distribution (QKD)</li>
+          <li>DRL for Quantum Optimization</li>
+          <li>Quantum Channel Modeling</li>
+          <li>BB84 &amp; E91 Protocols</li>
+          <li>Information-Theoretic Security</li>
+        </ul>
+      </div>
+
+      <div class="ec">
+        <div class="ei ei-b"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+        <h3>Digital Design &amp; VLSI</h3>
+        <ul class="el">
+          <li>RTL Design — Verilog / VHDL</li>
+          <li>FSM, Timing Analysis, Synthesis</li>
+          <li>Cadence Virtuoso &amp; Innovus</li>
+          <li>Xilinx FPGA Prototyping</li>
+          <li>CMOS Analog &amp; Digital Design</li>
+        </ul>
+      </div>
+
+      <div class="ec">
+        <div class="ei ei-gr"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/><line x1="12" y1="8" x2="12" y2="13"/><line x1="12" y1="13" x2="5" y2="16"/><line x1="12" y1="13" x2="19" y2="16"/></svg></div>
+        <h3>SDN &amp; Cognitive Radio</h3>
+        <ul class="el">
+          <li>Software Defined Networking (SDN)</li>
+          <li>Cognitive Radio Networks (CRN)</li>
+          <li>Dynamic Spectrum Access</li>
+          <li>Information &amp; Coding Theory</li>
+          <li>Modern Communication Systems</li>
+        </ul>
+      </div>
+
+      <div class="ec">
+        <div class="ei ei-p"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h3>ML &amp; Deep Learning</h3>
+        <ul class="el">
+          <li>Deep Reinforcement Learning (DRL)</li>
+          <li>Modulation Classification (CNN)</li>
+          <li>Speech Enhancement &amp; Denoising</li>
+          <li>PyTorch, NumPy, Scikit-learn</li>
+          <li>ML for Wireless Communications</li>
+        </ul>
+      </div>
+
+      <div class="ec">
+        <div class="ei ei-g"><svg viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div>
+        <h3>Scientific Computing</h3>
+        <ul class="el">
+          <li>MATLAB &amp; Simulink</li>
+          <li>Python — PyTorch, SciPy</li>
+          <li>Embedded Systems (C / C++)</li>
+          <li>Linux &amp; Shell Scripting</li>
+          <li>GNU Radio / SDR Tools</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="w res-sec">
+    <p class="slabel">Research &amp; Publications</p>
+    <h2 class="stitle">Published Work</h2>
+    <div class="res-card">
+      <div>
+        <span class="res-tag">IEEE Publication</span>
+        <h3 class="res-title">Enhancing Two-Area Interconnected Power Systems Using Model Predictive and PID Control</h3>
+        <p class="res-desc">Comparative study of Model Predictive Control (MPC) vs. PID strategies for load frequency control and disturbance rejection in multi-area interconnected power systems. Demonstrates superior transient response and stability margins of MPC under realistic load variation, with quantified improvement in frequency deviation and settling time.</p>
+        <span class="res-meta">IEEE Xplore · DOI: 10.1109/…10939323</span>
+      </div>
+      <div class="res-actions">
+        <a href="https://ieeexplore.ieee.org/document/10939323" target="_blank" class="res-link">
+          <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          View on IEEE Xplore
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="w proj-sec">
+    <p class="slabel">Technical Projects</p>
+    <h2 class="stitle">Selected Work</h2>
+    <div class="proj-grid">
+
+      <a href="https://github.com/divyanshu-naugai/Modulation-Classification" target="_blank" class="pc pc-b">
+        <div class="pn">
+          <span>01 / ML + COMMS</span>
+          <span class="pl-ico"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </div>
+        <h3 class="pt">Modulation Classification via Deep Learning</h3>
+        <p class="pd">Automated identification of radio modulation schemes using CNN and LSTM networks trained on RF datasets. Classifies BPSK, QPSK, QAM, FSK — enabling adaptive receivers for cognitive radio and next-generation wireless systems.</p>
+        <div class="ptags">
+          <span class="ptag">Deep Learning</span><span class="ptag">PyTorch</span><span class="ptag">RF Signals</span><span class="ptag">CNN / LSTM</span><span class="ptag">Cognitive Radio</span>
+        </div>
+      </a>
+
+      <div class="pc pc-g">
+        <div class="pn">02 / DSP + CRYPTOGRAPHY</div>
+        <h3 class="pt">Secure Image Encryption via DWT &amp; Chaotic Maps</h3>
+        <p class="pd">Symmetric-key image encryption using a permutation-diffusion architecture. DWT de-correlates pixel data; a chaotic logistic map drives scrambling and XOR-based diffusion. Achieves lossless reconstruction (MSE = 0, PSNR = ∞) with a perfectly uniform encrypted histogram — resistant to statistical attacks.</p>
+        <div class="ptags">
+          <span class="ptag">DWT</span><span class="ptag">Chaotic Maps</span><span class="ptag">MATLAB</span><span class="ptag">Cryptography</span><span class="ptag">Time-Frequency</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- POETRY -->
+<section>
+  <div class="w po-sec">
+    <p class="slabel">Philosophy &amp; Verse</p>
+    <div class="po-card">
+      <p class="po-lbl">Death to whom?</p>
+      <p class="po-text">
+        In the realm of unawareness,<br>They know nothing of the pain.<br>
+        Yet here I am, walking in their footsteps,<br>Wishing an end to their suffering.<br><br>
+        Death? Oh, forgive my selfish thoughts,<br>How self-centered I am,<br>
+        Contemplating my own desires<br>Of a life with misery suffice.
       </p>
-    </header>
+    </div>
+  </div>
+</section>
 
-    <main class="container mx-auto px-4 py-8">
-      <div class="flex flex-col md:flex-row items-center justify-between mb-20 gap-12">
-        <div class="md:w-3/5">
-          <h2 class="text-3xl font-bold mb-6 border-b-2 border-indigo-500 inline-block">About Me</h2>
-          <p class="text-lg leading-relaxed text-gray-300">
-            I am an M.Tech student specializing in Communication and Signal Processing at the Indian Institute of Technology (IIT) Indore. With a strong foundation in ECE and a GATE AIR 1999, my work focuses on the intersection of hardware architecture and high-performance algorithmic development.
-            <br /><br />
-            My expertise spans from VLSI design (Cadence, Verilog) to implementing complex DSP algorithms and exploring Machine Learning applications in signal analysis. I bridge the gap between theoretical modeling and physical implementation, aiming to create hardware-efficient engineering solutions.
-            <br /><br />
-            Deeply interested in the "human" side of logic, I find creative balance through poetry and philosophy, which often informs my approach to complex problem-solving.
-          </p>
-        </div>
-        <div class="md:w-2/5 flex justify-center">
-          <div class="relative">
-            <div class="absolute -inset-1 bg-indigo-500 rounded-full blur opacity-30"></div>
-            <img
-              src="./images/self.jpeg"
-              alt="Divyanshu Naugai"
-              class="relative rounded-full w-72 h-72 object-cover border-4 border-indigo-900 shadow-2xl"
-            />
-          </div>
-        </div>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="w con-sec">
+    <div class="con-grid">
+      <div>
+        <p class="slabel">Contact</p>
+        <h2 class="con-h">Let's build something<br><em>meaningful</em> together.</h2>
+        <p class="con-sub">Whether you're exploring research collaborations in quantum communications, DRL, or signal processing — or looking for a hardware/ML engineer for your team — I'd love to connect.</p>
       </div>
-
-      <section class="mb-20">
-        <h2 class="text-3xl font-bold mb-10 text-center">Domain Expertise</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-slate-800 bg-opacity-50 p-8 rounded-xl border border-slate-700 card-hover">
-            <div class="flex items-center mb-4 text-indigo-400">
-              <i data-feather="activity" class="w-8 h-8 mr-3"></i>
-              <h3 class="text-xl font-bold">Signal Processing</h3>
-            </div>
-            <ul class="space-y-2 text-gray-300">
-              <li>• Discrete Wavelet Transforms (DWT)</li>
-              <li>• STFT & Time-Frequency Analysis</li>
-              <li>• Adaptive Filtering & Denoising</li>
-              <li>• Statistical Signal Modeling</li>
-            </ul>
-          </div>
-
-          <div class="bg-slate-800 bg-opacity-50 p-8 rounded-xl border border-slate-700 card-hover">
-            <div class="flex items-center mb-4 text-indigo-400">
-              <i data-feather="cpu" class="w-8 h-8 mr-3"></i>
-              <h3 class="text-xl font-bold">VLSI & Hardware</h3>
-            </div>
-            <ul class="space-y-2 text-gray-300">
-              <li>• RTL Design (Verilog/VHDL)</li>
-              <li>• Cadence Virtuoso & Innovus</li>
-              <li>• Xilinx FPGA Prototyping</li>
-              <li>• CMOS Analog & Digital Design</li>
-            </ul>
-          </div>
-
-          <div class="bg-slate-800 bg-opacity-50 p-8 rounded-xl border border-slate-700 card-hover">
-            <div class="flex items-center mb-4 text-indigo-400">
-              <i data-feather="terminal" class="w-8 h-8 mr-3"></i>
-              <h3 class="text-xl font-bold">Scientific Computing</h3>
-            </div>
-            <ul class="space-y-2 text-gray-300">
-              <li>• Python (PyTorch, NumPy)</li>
-              <li>• MATLAB & Simulink</li>
-              <li>• Embedded Systems (C/C++)</li>
-              <li>• Linux & Shell Scripting</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="mb-20">
-        <h2 class="text-3xl font-bold mb-10 text-center">Research & Publications</h2>
-        <div class="max-w-4xl mx-auto">
-          <div class="p-6 bg-indigo-900 bg-opacity-20 rounded-xl border-l-4 border-indigo-500 backdrop-blur-sm">
-            <div class="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-4">
-              <h3 class="text-xl font-bold text-white">
-                Enhancing Two-Area Interconnected Power Systems Using Model Predictive and PID Control
-              </h3>
-              <span class="px-3 py-1 bg-indigo-700 text-xs font-bold rounded-full uppercase tracking-wider">IEEE Publication</span>
-            </div>
-            <p class="text-gray-300 mb-6 italic">
-              Comparative analysis of MPC vs PID strategies for frequency regulation and disturbance rejection in multi-area systems.
-            </p>
-            <div class="flex justify-between items-center">
-              <span class="text-indigo-300 font-medium">IEEE Explore</span>
-              <a href="https://ieeexplore.ieee.org/document/10939323" target="_blank" class="flex items-center text-white bg-indigo-600 px-4 py-2 rounded hover:bg-indigo-500 transition">
-                <i data-feather="external-link" class="w-4 h-4 mr-2"></i> View Paper
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="mb-20">
-        <h2 class="text-3xl font-bold mb-10 text-center">Technical Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-slate-800 bg-opacity-40 p-6 rounded-xl border border-slate-700">
-            <h3 class="text-xl font-bold mb-2">Graphene Fiber Temperature Sensing</h3>
-            <p class="text-gray-400 mb-4">Modeling and implementing a sensitive fiber-based temperature sensing system using Arduino and specialized signal acquisition circuitry.</p>
-            <div class="flex gap-2">
-              <span class="text-xs bg-slate-700 px-2 py-1 rounded">Sensors</span>
-              <span class="text-xs bg-slate-700 px-2 py-1 rounded">Arduino</span>
-            </div>
-          </div>
-          <div class="bg-slate-800 bg-opacity-40 p-6 rounded-xl border border-slate-700">
-            <h3 class="text-xl font-bold mb-2">Audio Denoising via Neural Networks</h3>
-            <p class="text-gray-400 mb-4">Deep learning-based speech enhancement system compared against classical Wiener filtering and spectral subtraction methods.</p>
-            <div class="flex gap-2">
-              <span class="text-xs bg-slate-700 px-2 py-1 rounded">ML</span>
-              <span class="text-xs bg-slate-700 px-2 py-1 rounded">PyTorch</span>
-              <span class="text-xs bg-slate-700 px-2 py-1 rounded">DSP</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="mb-20 italic">
-        <h2 class="text-3xl font-bold mb-10 text-center not-italic">Philosophy & Verse</h2>
-        <div class="bg-white bg-opacity-5 p-10 rounded-3xl max-w-2xl mx-auto border border-white border-opacity-10">
-          <h3 class="text-xl font-semibold mb-6 text-center text-indigo-200">Death to whom?</h3>
-          <p class="text-lg text-gray-300 text-center leading-relaxed">
-            In the realm of unawareness,<br />
-            They know nothing of the pain.<br />
-            Yet here I am, walking in their footsteps,<br />
-            Wishing an end to their suffering.<br /><br />
-            Death? Oh, forgive my selfish thoughts,<br />
-            How self-centered I am,<br />
-            Contemplating my own desires<br />
-            Of a life with misery suffice.
-          </p>
-        </div>
-      </section>
-
-      <section class="text-center pb-20">
-        <h2 class="text-2xl font-bold mb-8">Get in Touch</h2>
-        <div class="flex justify-center space-x-10">
-          <a href="https://github.com/divyanshu-naugai" target="_blank" class="hover:text-indigo-400 transition-transform hover:scale-110"><i data-feather="github" class="w-8 h-8"></i></a>
-          <a href="https://www.linkedin.com/in/divyanshu-naugai" target="_blank" class="hover:text-indigo-400 transition-transform hover:scale-110"><i data-feather="linkedin" class="w-8 h-8"></i></a>
-          <a href="mailto:divyanshunaugai360@gmail.com" class="hover:text-indigo-400 transition-transform hover:scale-110"><i data-feather="mail" class="w-8 h-8"></i></a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="bg-slate-950 py-8 border-t border-slate-900">
-      <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
-        <p>&copy; 2026 Divyanshu Naugai | IIT Indore | Communication & Signal Processing</p>
+      <div class="con-links">
+        <a href="/cdn-cgi/l/email-protection#8febe6f9f6eee1fce7fae1eefae8eee6bcb9bfcfe8e2eee6e3a1ece0e2" class="cl">
+          <div class="cl-ic"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="cl-t"><span class="cl-n">Email</span><span class="cl-d"><span class="__cf_email__" data-cfemail="24404d525d454a574c514a455143454d171214644349454d480a474b49">[email&#160;protected]</span></span></div>
+          <span class="cl-ar"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a href="https://www.linkedin.com/in/divyanshu-naugai" target="_blank" class="cl">
+          <div class="cl-ic"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+          <div class="cl-t"><span class="cl-n">LinkedIn</span><span class="cl-d">/in/divyanshu-naugai</span></div>
+          <span class="cl-ar"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a href="https://github.com/divyanshu-naugai" target="_blank" class="cl">
+          <div class="cl-ic"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></div>
+          <div class="cl-t"><span class="cl-n">GitHub</span><span class="cl-d">/divyanshu-naugai</span></div>
+          <span class="cl-ar"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
       </div>
-    </footer>
+    </div>
+  </div>
+</section>
 
-    <script>
-      feather.replace();
-    </script>
-  </body>
-</html>
+<footer>
+  <div class="fl">
